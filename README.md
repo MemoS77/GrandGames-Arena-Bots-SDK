@@ -1,3 +1,3 @@
-На русском: [README/ru.md](README/ru.md)
+In english: [readme_en.md](readme_en.md)
 
-In english: [README/en.md](README/en.md)
+На русском: [readme_ru.md](readme_ru.md)
