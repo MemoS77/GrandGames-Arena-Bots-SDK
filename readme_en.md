@@ -16,27 +16,6 @@ Links to projects implementing work with this SDK can be found in the [samples.m
 2. Get an authorization token (there is a button in profile settings)
 3. Implement a bot using the SDK
 
-```bash
-npm i gga-bots
-```
-
-## Usage Example
-
-```typescript
-import { BotSDK, GameId } from 'gga-bots'
-const sdk = new BotSDK()
-
-await sdk.connect('YOUR_ARENA_TOKEN', { games: [GameId.Chess] })
-
-sdk.onPosition<{ fen: string }>(async (p) => {
-  if (p.needMove) {
-    // ai - your AI implementation
-    const move = await ai.getBestMove(p)
-    await sdk.move(p.tableId!, move)
-  }
-})
-```
-
 First and foremost, the GrandGames Arena service is intended for human play.
 Our motivation is primarily to give people the opportunity to play when there are no other players and thus make the service more interesting and popular. Secondly - to provide people who are passionate about programming and board games with the opportunity to test their skills in algorithm development.
 

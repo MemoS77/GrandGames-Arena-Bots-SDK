@@ -16,27 +16,6 @@ SDK позволяет выполнять подключения к платфо
 2. Получить токен для авторизации (в настройках профилях есть кнопка)
 3. Реализовать бота с использованием SDK
 
-```bash
-npm i gga-bots
-```
-
-## Пример использования
-
-```typescript
-import { BotSDK, GameId } from 'gga-bots'
-const sdk = new BotSDK()
-
-await sdk.connect('YOUR_ARENA_TOKEN', { games: [GameId.Chess] })
-
-sdk.onPosition<{ fen: string }>(async (p) => {
-  if (p.needMove) {
-    // ai - your AI implementation
-    const move = await ai.getBestMove(p)
-    await sdk.move(p.tableId!, move)
-  }
-})
-```
-
 В первую очередь сервис GrandGames Arena предназначен для игры людей.
 Наша мотивация заключается в первую очередь в том, чтобы дать возможность поиграть людям, когда нет других игроков и соответсвенно сделать сервис более интересным и популярным. Во вторую очередь - предоставить увлеченным программированием и настольными играми людям, проверить свой скилл в разработке алгоритмов для игры.
 
