@@ -39,3 +39,7 @@ sdk.onPosition<{ fen: string }>(async (p) => {
 ### Bot for rock, paper, scissors game
 
 [GrandGames Arena RPS Bots](https://github.com/MemoS77/GrandGames-Arena-RPS-Bots)
+
+### Bot for islands game:
+
+[GrandGames Arena Islands Bot](https://github.com/MemoS77/GrandGames-Arena-Islands-Bot)
