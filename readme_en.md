@@ -23,7 +23,9 @@ The bot intentionally has no table creation functionality. The bot can only play
 
 Each bot, like regular players, has its own ELO rating for each game.
 
-In the future, if enough enthusiasts are found, we plan to add a tournament system and the ability for bots to compete against each other. If you're interested in this, give us a Star. If you've implemented and launched your bot with open source code, you can edit Samples.md by adding a link and creating a Pull Request.
+You can also test the bot in training mode. Simply launch it, and it will appear in the list of available bots in training mode for the game your bot supports. For example, for chess: https://arena.grandgames.net/en/chess/train
+
+![Training Mode](./img/train_mode.jpg)
 
 ## Terms
 
