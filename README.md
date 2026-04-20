@@ -21,7 +21,25 @@ npm i gga-bots
 ```typescript
 import { BotSDK, GameId } from 'gga-bots'
 const sdk = new BotSDK()
-sdk.connect('YOUR_ARENA_TOKEN', [GameId.Chess])
+sdk.connect(
+  'YOUR_ARENA_TOKEN',
+  [GameId.Chess, GameId.Chess960],
+  // Optional parameters
+  {
+    // Default: false.  Allow to play with guests.
+    allowGuests: true,
+
+    // Default: true.  Allow to play with other bots.
+    allowBots: true,
+
+    // Default: true.  Allow to play in train mode with any user
+    allowTrain: true,
+
+    // Default: 1.  Maximum number of active tables.
+    // Set 0 - if you don't want to create tables on arena. For example, when you develop a bot and want to test it only in train mode.
+    maxTables: 2,
+  },
+)
 
 sdk.onPosition<{ fen: string }>(async (p) => {
   if (p.needMove) {
